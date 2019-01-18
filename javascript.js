@@ -2,7 +2,7 @@ function yourGuess() {
     var guess = document.getElementById("guess").value;
     var guesses = document.getElementById("output");
     if (guess == numToGuess) {
-        guesses.value = guesses.value + "\r" + "You have guessed correctly! ("+guess+")";
+        guesses.value = guesses.value + "\r" + "BOOM! ("+guess+")";
     } else if (guess > numToGuess) {
         guesses.value = "Your last guess was "+guess+" That is too high";
     } else {
