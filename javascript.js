@@ -4,9 +4,9 @@ function yourGuess() {
     if (guess == numToGuess) {
         guesses.value = guesses.value + "\r" + "You have guessed correctly! ("+guess+")";
     } else if (guess > numToGuess) {
-        guesses.value = guesses.value + "\r" + "Your last guess was "+guess+" That is too high";
+        guesses.value = "Your last guess was "+guess+" That is too high";
     } else {
-        guesses.value = guesses.value + "\r" + "Your last guess was "+guess+" That is too low";
+        guesses.value = "Your last guess was "+guess+" That is too low";
     }
 }
 
