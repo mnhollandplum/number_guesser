@@ -10,7 +10,7 @@ function yourGuess() {
     }
 }
 
-function generateNumberToGuess(confirmIt) {
+function generateNumberToGuess() {
     var guesses = document.getElementById("output");
     guesses.value = '';
     numToGuess = Math.floor(Math.random()*100);
