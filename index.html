@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title> Number Guesser </title>
-  </head>
+  <!DOCTYPE html>
+  <html>
 
-  <body>
-    <script src="javascript.js"></script>
-
-    <div class = "form">
-      Enter Your Guess <input type = "text">
-    <div class = "submitbutton">
-      <input type="submit" value="Submit">
-    <div class = "clearbutton">
-      <input type ="clear" value="Delete">
-    <div class="resetbutton">
-       <input type="reset" value="Reset">
-   </div>
-  </body>
+    <body>
+      <h1> Number Guesser <h1> <br />
+      <script src="javascript.js"></script>
+      <input type="text" id="guess" placeholder="Enter your guess"/>
+      <br/>
+      <input type="button" onclick="yourGuess()" value="Guess" />
+      <input type="button"  onclick="document.getElementById('guess').value = ''" value= "Clear"/<br/>
+      <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
+      <input type="button" onclick="generateNumberToGuess(true)" value="Reset" /  ><br />
+    </body>
