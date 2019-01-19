@@ -3,6 +3,14 @@ function yourGuess() {
     var guesses = document.getElementById("output");
     if (guess == numToGuess) {
         guesses.value = guesses.value + "\r" + "BOOM! ("+guess+")";
+    } else if(isNaN(guess)) {
+        alert("That is not a valid number");
+        guessField.value = '';
+        return;
+    } else if(guess > 100) {
+        alert(guess + " is not within the accepted range, please pick a number between 1 and 100");
+        guessField.value = '';
+        return;
     } else if (guess > numToGuess) {
         guesses.value = "Your last guess was "+guess+" That is too high";
     } else {
