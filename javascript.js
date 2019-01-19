@@ -1,6 +1,8 @@
 function yourGuess() {
     var guess = document.getElementById("guess").value;
     var guesses = document.getElementById("output");
+    document.getElementById("resetButton").disabled = false;
+    document.getElementById("clearButton").disabled = false;
     if (guess == numToGuess) {
         guesses.value = guesses.value + "\r" + "BOOM! ("+guess+")";
     } else if(isNaN(guess)) {
@@ -12,9 +14,9 @@ function yourGuess() {
         guessField.value = '';
         return;
     } else if (guess > numToGuess) {
-        guesses.value = "Your last guess was "+guess+" That is too high";
+        guesses.value = "Your last guess was "+guess+" that is too high";
     } else {
-        guesses.value = "Your last guess was "+guess+" That is too low";
+        guesses.value = "Your last guess was "+guess+" that is too low";
     }
 }
 
