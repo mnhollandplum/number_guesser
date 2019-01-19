@@ -2,12 +2,13 @@
   <html>
 
     <body>
-      <h1> Number Guesser <h1> <br />
+      <div class="header">
+      <h1> Number Guesser <h1> </div> <br />
       <script src="javascript.js"></script>
       <input type="text" id="guess" placeholder="Enter your guess"/>
       <br/>
-      <input type="button" onclick="yourGuess()" value="Guess" />
-      <input type="button"  onclick="document.getElementById('guess').value = ''" value= "Clear"/<br/>
+      <input type="button" onclick="yourGuess()" value="Guess" id=guessButton />
+      <input type="button" onclick="document.getElementById('guess').value = ''" value= "Clear" id = clearButton disabled/<br/>
       <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
-      <input type="button" onclick="generateNumberToGuess(true)" value="Reset" /  ><br />
+      <input type="button" onclick="generateNumberToGuess(true)" value="Reset" id=resetButton disabled /  ><br />
     </body>
