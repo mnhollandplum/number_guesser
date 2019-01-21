@@ -4,7 +4,7 @@ function yourGuess() {
     document.getElementById("resetButton").disabled = false;
     document.getElementById("clearButton").disabled = false;
     if (guess == numToGuess) {
-        alert("Boom " +guess+ "is correct! Press reset to play again" )
+        alert("Boom " +guess+ " is correct! Press reset to play again. Your minimum number will decrease by ten and your maximum number will increase by 10" )
         guesses.value = "Press the reset button to play again";
         winAddition();
     } else if(isNaN(guess)) {
