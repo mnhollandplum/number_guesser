@@ -22,18 +22,6 @@ function yourGuess() {
     }
 }
 
-function generateNumberToGuess() {
-    var guesses = document.getElementById("output");
-    guesses.value = '';
-    numToGuess = Math.floor(Math.random()* (max - min)) + min;
-    guesses.value = "New number generated.\n";
-}
-
-
-window.onload = function(){
-    generateNumberToGuess();
-}
-
 var minSet = parseInt(document.getElementById("min").value);
 var maxSet = parseInt(document.getElementById("max").value);
 numToGuess = Math.floor(Math.random()* (maxSet - minSet)) + minSet;
@@ -41,11 +29,13 @@ var setButton = document.querySelector('#setRange');
 setButton.addEventListener('click', setRange);
 
 function setRange() {
-
+    var guesses = document.getElementById("output");
     minSet = Number(min.value);
     maxSet = Number(max.value);
     numToGuess = Math.floor(Math.random() * (maxSet - minSet + 1)) + minSet;
-    alert("The new range is between " + minSet + " and " + maxSet + "." + " Please submit your guess:");
+    alert("The new range is between " + minSet + " and " + maxSet + "." + " Please submit your guess.");
+    guesses.value = ("The new range is between " + minSet + " and " + maxSet + "." + " Please submit your guess.");
+
 }
 
 function winCondition(){
