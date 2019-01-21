@@ -16,9 +16,9 @@ function yourGuess() {
         guessField.value = '';
         return;
     } else if (guess > numToGuess) {
-        guesses.value = "Your last guess was " + guess + " that is too high";
+        guesses.value = "Your last guess was " + guess + ". That is too high";
     } else {
-        guesses.value = "Your last guess was " + guess+ " that is too low";
+        guesses.value = "Your last guess was " + guess+ ". That is too low";
     }
 }
 
