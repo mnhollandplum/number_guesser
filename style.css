@@ -4,3 +4,16 @@ body {
   text-align: center;
   font-size: 30px;
 }
+
+h1 {
+  color: #E6E7E8;
+  background-color: #404041;
+  padding: 1px;
+}
+
+input {
+  width: 250px;
+  padding: 5px;
+  margin: 8px 0;
+  font-size: 25px;
+}
