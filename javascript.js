@@ -4,9 +4,9 @@ function yourGuess() {
     document.getElementById("resetButton").disabled = false;
     document.getElementById("clearButton").disabled = false;
     if (guess == numToGuess) {
-        alert("Boom " +guess+ " is correct! Press reset to play again. Your minimum number will decrease by ten and your maximum number will increase by 10" )
-        guesses.value = "Press the reset button to play again";
-        winAddition();
+        winCondition();
+        alert("Boom " + guess + " is correct! A new range has been set." )
+        guesses.value = ("Your new range is " + minSet + " to " + maxSet);
     } else if(isNaN(guess)) {
         alert("That is not a valid number");
         guess.value = '';
@@ -16,9 +16,9 @@ function yourGuess() {
         guessField.value = '';
         return;
     } else if (guess > numToGuess) {
-        guesses.value = "Your last guess was "+guess+" that is too high";
+        guesses.value = "Your last guess was " + guess + " that is too high";
     } else {
-        guesses.value = "Your last guess was "+guess+" that is too low";
+        guesses.value = "Your last guess was " + guess+ " that is too low";
     }
 }
 
@@ -41,16 +41,17 @@ var setButton = document.querySelector('#setRange');
 setButton.addEventListener('click', setRange);
 
 function setRange() {
+
     minSet = Number(min.value);
     maxSet = Number(max.value);
     numToGuess = Math.floor(Math.random() * (maxSet - minSet + 1)) + minSet;
     alert("The new range is between " + minSet + " and " + maxSet + "." + " Please submit your guess:");
 }
 
-function winAddition(){
-  minSet -= 10;
+function winCondition(){
+  minSet -= 11;
   maxSet += 10;
   document.getElementById("min").value = min;
   document.getElementById("max").value = max;
-  numToGuess = randomNumber();
+  numToGuess = Math.floor(Math.random() * (maxSet - minSet + 1)) + minSet;
 }
